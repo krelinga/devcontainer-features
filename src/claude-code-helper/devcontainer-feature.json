@@ -1,0 +1,21 @@
+{
+  "id": "claude-code-helper",
+  "version": "1.0.0",
+  "name": "Claude Code Helper",
+  "description": "Mounts a per-container volume for Claude Code auth/config, sets CLAUDE_CONFIG_DIR, and installs tmux",
+  "mounts": [
+    {
+      "source": "claude-code-config-${devcontainerId}",
+      "target": "/home/vscode/.claude",
+      "type": "volume"
+    }
+  ],
+  "containerEnv": {
+    "CLAUDE_CONFIG_DIR": "/home/vscode/.claude"
+  },
+  "dependsOn": {
+    "ghcr.io/devcontainers-extra/features/apt-get-packages:1": {
+        "packages": ["tmux"]
+    }
+  }
+}
