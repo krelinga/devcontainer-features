@@ -1,6 +1,6 @@
 {
   "id": "claude-code-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "Claude Code Helper",
   "description": "Mounts a per-container volume for Claude Code auth/config, sets CLAUDE_CONFIG_DIR, and installs tmux",
   "mounts": [
